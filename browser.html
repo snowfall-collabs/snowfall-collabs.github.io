@@ -108,8 +108,8 @@
                                                 <audio id="music" controls autoplay loop>
                                                   <source src="https://snowfall-collabs.github.io/no_more_email.mp3" type="audio/mp3">
                                                 </audio>-->
-                                              <!--<video controls="controls" poster="https://i.ytimg.com/vi/Q5xHUsK7k9k/hqdefault.jpg" src="https://www.w3schools.com/html/mov_bbb.mp4" id="video" autoplay loop muted>-->
-                                              <iframe id="frame" width="480" height="270" src="https://www.youtube.com/embed/Q5xHUsK7k9k?autoplay=1&amp;rel=0&amp;loop=1&amp;playlist=Q5xHUsK7k9k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                              <video controls="controls" poster="https://i.ytimg.com/vi/Q5xHUsK7k9k/hqdefault.jpg" src="no_more_email.mp4" id="video" loop>
+                                              <!--<iframe id="frame" width="480" height="270" src="https://www.youtube.com/embed/Q5xHUsK7k9k?autoplay=1&amp;rel=0&amp;loop=1&amp;playlist=Q5xHUsK7k9k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
                                             </div>
                                              <div class="space-y-3 text-center" style="" align="center" id="signoff">
                                               <p>A message from yours truly. &#128513</p>
@@ -156,7 +156,8 @@
         var button = document.getElementById("button");
         //var music = document.getElementById("music");
         //var img = document.getElementById("img");
-        var frame = document.getElementById("frame");
+        //var frame = document.getElementById("frame");
+        var video = document.getElementById("video");
         var message = document.getElementById("message");
         var load = document.getElementById("load");
         var signoff = document.getElementById("signoff");
@@ -166,6 +167,7 @@
         message.style.display = "none";
         button.style.display = "none";
         signoff.style.display = "none";
+        video.style.display = "none";
         window.setTimeout(function() {
             message.style.display = "block";
             button.style.display = "block";
@@ -176,9 +178,11 @@
             //img.style.display = "block";
             frame.style.display = "block";
             signoff.style.display = "block";
+            video.style.display = "block";
             button.style.display = "none";
             message.style.display = "none";
             //music.play();
+            video.play();
         });
 </script>
 </html>
